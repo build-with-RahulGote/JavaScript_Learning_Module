@@ -14,4 +14,4 @@
 
 ( (name)=>{
    console.log(`DB Connected two ${name} `);
-})('Rahul' )//unmaed iife
+})('Rahul' )//unmaed iifed
