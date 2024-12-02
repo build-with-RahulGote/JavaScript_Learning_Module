@@ -116,4 +116,3 @@ const price=1000;
 
 price<=900 ? console.log("price is less"):console.log("price is high");
 
-
