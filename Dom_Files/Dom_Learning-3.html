@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-learning-3</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+
+<script>
+
+        const div=document.createElement('div')
+   console.log(div)
+
+div.className="main"
+div.id=Math.round(Math.random() *10 + 1)
+div.style.backgroundColor="green"
+div.style.width="400px"
+div.style.height="100px"
+
+
+div.setAttribute("Title","main-div")
+div.innerText="We are learning JavaScript"
+const heading=document.createTextNode("Dom Manipulation")
+div.appendChild(heading)
+document.body.appendChild(div)
+const h1=document.createElement('h1')
+h1.innerText="Document Object Model"
+div.appendChild(h1)
+
+
+//     function addelement(colorname)
+//     { 
+//         const color=true;
+//         if (color) {
+            
+            
+//             const div=document.createElement('div')
+//         console.log(div)
+//             console.log(colorname)
+//     div.className="main"
+//     div.id=Math.round(Math.random() *10 + 1)
+//     for (let index = 0; index < colorname.length; index++) {
+//         div.style.backgroundColor=`${colorname[index]}`
+//     }
+   
+//     div.style.width="400px"
+//     div.style.height="100px"
+//     div.setAttribute("Title","main-div")
+//     div.innerText="We are learning JavaScript"
+//     const heading=document.createTextNode("Dom Manipulation")
+//     div.appendChild(heading)
+//     document.body.appendChild(div)
+        
+//         }
+        
+        
+       
+//     }
+//    const coloarray=["pink","blue","white","red","green"]
+//     addelement(coloarray);
+
+    
+   
+
+</script>
+</html>
