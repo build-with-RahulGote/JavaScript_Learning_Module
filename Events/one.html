@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First html events</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h2>Amagaing Images</h2>
+    <div>
+        <ul id="images">
+
+            <li><img  style="width: 200px;" id="owl"  src="https://images.pexels.com/photos/28290901/pexels-photo-28290901/free-photo-of-buho-de-anteojos.jpeg" alt="owl"></li>
+            <li><img  style="width: 150px;" id="dog"  src="https://images.pexels.com/photos/46505/swiss-shepherd-dog-dog-pet-portrait-46505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dog"  ></li>
+            <li><img   style="width: 200px;"    id="cat"  src="https://images.pexels.com/photos/177809/pexels-photo-177809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""></li>
+            <li><img   style="width: 200px;"    id="cat"  src="https://images.pexels.com/photos/325045/pexels-photo-325045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""></li>
+            <li><a href="https://www.google.co.in/" style="color: aliceblue;" id="google">Google</a></li>
+            
+
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('dog').onclick=function()
+    // {
+    //     alert('dog')
+    // }
+
+
+    //Event Propagation(Bubling)
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("this ul class")
+    // },false)
+
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("i am owl")
+    // e.stopPropagation()
+    // },false)
+
+
+// capcturing mode
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("this ul class")
+    // },true)
+
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("i am owl")
+     
+    // },true)
+
+    
+
+   document.getElementById('google').addEventListener('click',function(e){
+     e.preventDefault();
+     e.stopPropagation();
+     console.log("google link Cliked")
+   },false)
+
+document.querySelector('#images').addEventListener('click',function(e){
+    // console.log(e.target.parentNode);
+
+    if(e.target.tagName==="IMG")
+{
+    console.log(e.target.id)
+    let removeIt=e.target.parentNode
+    removeIt.remove()
+
+}
+    
+})
+
+
+
+</script>
+</html>
+<!-- type,timestamp , defaultprevent -->
+ <!-- target,toElement,srcElement,currenttarget -->
+  <!-- clientx.clinenty,screenx ,screeny-->
+   <!-- altkey,shiftkey,keycode -->
+
+   <!-- Execution context -->
+    
